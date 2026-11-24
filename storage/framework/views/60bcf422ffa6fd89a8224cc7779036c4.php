@@ -1,0 +1,2 @@
+
+<?php echo $__env->make("theme.$theme.app", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\gestion-soporte\resources\views/start.blade.php ENDPATH**/ ?>
