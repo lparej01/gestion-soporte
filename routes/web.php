@@ -74,6 +74,7 @@ Route::group(['prefix' => 'servicios', 'namespace' => 'App\Http\Controllers\Serv
   Route::get('asignacion/create', 'AsignacionEquipoController@create')->name('crear.asignacion');
   Route::post('asignacion', 'AsignacionEquipoController@store')->name('save.asignacion');
   Route::get('asignacion/{id}/pdf', 'AsignacionEquipoController@pdf')->name('asignacion.pdf');
+  Route::get('asignacion-export', 'AsignacionEquipoController@export')->name('asignacion.export');
   
 
   Route::get('incidencias', 'IncidenciasController@index')->name('incidencias.list');    

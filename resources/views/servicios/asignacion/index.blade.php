@@ -22,8 +22,13 @@
                                          @if ($actionsBlade->can_create > 0)
                                             <a href="{{ route('crear.asignacion') }}" class="btn btn-primary float-right"
                                                 data-placement="left">
-                                                {{ __('Crear Nueva Asignacion Equipo') }}
-                                            </a>
+                                                {{ __('Crear   Nueva   Asignacion   Equipo') }}
+                                            </a>                                           
+                                            <br><br>    
+                                            <a href="{{ route('asignacion.export') }}" class="btn btn-primary float-right"
+                                            data-placement="left">
+                                            {{ __('Exportar   a    Excel') }}
+                                           </a>
                                         @endif
 
                                         <x-notify.modal x-data="{ id: tableControlles.idRow }" id-modal="modalAsignacion">

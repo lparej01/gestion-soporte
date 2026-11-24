@@ -10,6 +10,8 @@ use App\Models\Admin\PermisoRol;
 use App\Models\Servicios\SoporteTecnico\AsignacionEquipo;
 use Illuminate\Support\Facades\DB;
 use PDF;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\AsignacionEquipoExport;
 
 class AsignacionEquipoController extends Controller
 {
@@ -214,4 +216,8 @@ class AsignacionEquipoController extends Controller
        
 
     }
+    public function export(){
+
+        return Excel::download(new AsignacionEquipoExport, 'equipos_excel.xlsx');
+    } 
 }

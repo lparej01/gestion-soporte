@@ -339,6 +339,7 @@ Schema::connection('comments')->create('users', function($table)
     ###########Librerias excel
 
       composer require maatwebsite/excel
+      
 
       añadir archivo app.php
       
@@ -353,3 +354,6 @@ Schema::connection('comments')->create('users', function($table)
         hasta llegar a «aliases»
 
           'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
+          ##########para generar el excel
+          php artisan make:export AsignacionEquipoExport --model=AsignacionEquipo

@@ -4,7 +4,7 @@
 
             <div class="col-lg-6">
                 {{ Form::label('Persona - Unidad solicitante (*)') }}
-                {{ Form::text('usuarios', null, ['class' => 'form-control' . ($errors->has('usuarios') ? ' is-invalid' : ''),  "id" => "usuarios","name" => "usuarios","onKeyPress"=> "if(this.value.length==50) return false;",'placeholder' => 'Ingrese el Nombre de Usuario']) }}
+                {{ Form::text('usuarios', null, ['class' => 'form-control' . ($errors->has('usuarios') ? ' is-invalid' : ''),  "id" => "usuarios","name" => "usuarios","onKeyPress"=> "if(this.value.length==50) return false;",'placeholder' => 'Ingrese el Nombre de Usuario','autocomplete']) }}
                 {!! $errors->first('usuarios', '<div class="invalid-feedback">:message</div>') !!}
             </div> 
             <div class="col-lg-6">
@@ -44,7 +44,7 @@
             <br>           
             <div class="col-lg-6">
                 {{ Form::label('Reseña') }}
-                {{ Form::textarea('comentario', null, ['class' => 'form-control' . ($errors->has('comentario') ? ' is-invalid' : ''), "id" => "comentario","name" => "comentario","onKeyPress"=> "if(this.value.length==200) return false;",'placeholder' => 'Describa la tarea realizada']) }}
+                {{ Form::textarea('comentario', null, ['class' => 'form-control' . ($errors->has('comentario') ? ' is-invalid' : ''), "id" => "comentario","name" => "comentario","onKeyPress"=> "if(this.value.length==400) return false;",'placeholder' => 'Describa la tarea realizada']) }}
                 {!! $errors->first('comentario', '<div class="invalid-feedback">:message</div>') !!}
             </div>
              
